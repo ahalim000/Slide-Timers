@@ -64,9 +64,6 @@ TIMER_VIDEOS_SECONDS = {
     "60": "https://www.youtube.com/watch?v=OUQXwVIQw54",
 }
 
-# SPEAKER_NOTES_PATTERN_MINUTES = r"((tiempo sugerido|suggested|recomendación de tiempo|recommended time)\s*[:\-]?\s*(\d+(?:\.\d+)?)(\s*-\s*\d+(?:\.\d+)?)?\s*(minutos|minutes|min|mins))"
-# SPEAKER_NOTES_PATTERN_SECONDS = r"((tiempo sugerido|suggested time)\s*[:\-]?\s*(\d+(?:\.\d+)?)(\s*-\s*\d+(?:\.\d+)?)?\s*(segundos|seconds|seg|sec|segs|secs))"
-# SPEAKER_NOTES_PATTERN_MINUTES = r"((tiempo sugerido|suggested time|recomendación de tiempo|recommended time)\s*[:\-]?\s*(\d+(?:\.\d+)?)(\s*[–—-]\s*\d+(?:\.\d+)?)?\s*(minutos|minutes|min|mins))"
 SPEAKER_NOTES_PATTERN_MINUTES = r"((tiempo sugerido|tiempo recomendado|recomendación de tiempo|recommended time|suggested(?:\s+time)?)\s*[:\-–—]?\s*(?: (?:(?:para\s+)?diapositiva(?:s)?|for\s+slides)\s*\d+\s*[–—-]\s*\d+\s*[:\-–—]?\s* )?(\d+(?:\.\d+)?)(\s*[–—-]\s*\d+(?:\.\d+)?)?\s*(minutos|minutes|min|mins\.?)(?:\s*[-–—]?\s*(?:para\s+diapositivas|for\s+slides)\s*\d+\s*[–—-]\s*\d+)?)"
 SPEAKER_NOTES_PATTERN_SECONDS = r"((tiempo sugerido|suggested time|recomendación de tiempo|recommended time)\s*[:\-]?\s*(\d+(?:\.\d+)?)(\s*[–—-]\s*\d+(?:\.\d+)?)?\s*(segundos|seconds|seg|sec|segs|secs))"
 GRADE_PATTERN = r"(?:(?:Grade|Grado)\s+2|2(?:nd\s+grade|do\s+grado))"
