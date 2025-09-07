@@ -147,6 +147,12 @@ def get_suggested_time_for_slide(slide) -> Tuple[int, str] | None:
     return None
 
 
+"""
+Returns true when slides intended for teacher at beginning of slide deck
+are over and slides intended for students have begun.
+"""
+
+
 def is_presentation_started(slide) -> bool:
     for page_element in slide.get("pageElements", []):
         text_elements = (
@@ -168,6 +174,7 @@ def is_presentation_started(slide) -> bool:
     return False
 
 
+# Returns total number of slides in presentation
 def get_total_slides_in_pres(slides):
     total = 0
     for _ in slides:
@@ -176,6 +183,7 @@ def get_total_slides_in_pres(slides):
     return total
 
 
+# Determines whether a slide is an exit ticket
 def is_exit_ticket(slides, slide, slide_number) -> bool:
     total_slides = get_total_slides_in_pres(slides)
 
@@ -199,6 +207,7 @@ def is_exit_ticket(slides, slide, slide_number) -> bool:
     return False
 
 
+# Determines whether we're on the last slide (attributions slide)
 def is_presentation_ended(slide) -> bool:
     for page_element in slide.get("pageElements", []):
         text_elements = (
@@ -302,7 +311,7 @@ def add_videos(svc, pres, presentation_id):
                             "scaleX": 1,
                             "scaleY": 1,
                             "translateX": 630,  # Higher number is farther to right on X axis
-                            "translateY": 350,  # High number is lower on Y axis
+                            "translateY": 350,  # Higher number is lower on Y axis
                             "unit": "PT",
                         },
                     },
